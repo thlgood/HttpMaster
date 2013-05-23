@@ -14,24 +14,25 @@ using namespace std;
 #include <cstring>
 #include <glib.h>
 #include <linux/limits.h>
-
+#include <pthread.h>
 /**
  * @brief C++ headers
  */
 #include <iostream>
 #include <string>
-
+#include <queue>
+#include <set>
 /**
  * @brief HttpMaster header
  *
  */
 #include "config.h"
 #include "setuptcp.h"
-
+#include "work_thread.h"
 /**
  * @brief Macros
  */
-#define C_STRING(a) (char*)(a)          //disable char* to string cast
+#define C_STRING(a) (char*)(a)  //disable char* to string cast
 
 
 /**
@@ -43,5 +44,7 @@ extern int    thread_count;     //default 4
 extern int    max_load;         //max load per thread
 extern string docpath;          //website root
 extern string indexfile;        //default "index.htm"
+extern pthread_mutex_t accept_mutex;
+extern queue<int> reqs;         //requset queue;
 
 #endif // CORE_H

@@ -6,12 +6,14 @@ CONFIG -= qt
 SOURCES += main.cpp \
     setuptcp.cpp \
     default.cpp \
-    config.cpp
+    config.cpp \
+    work_thread.cpp
 
 HEADERS += \
     core.h \
     config.h \
-    setuptcp.h
+    setuptcp.h \
+    work_thread.h
 
 LIBS = -lglib-2.0 -lpthread
 
