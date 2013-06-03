@@ -3,12 +3,6 @@
 
 int load_config()
 {
-/*    extern int    port;             //default 8080
-    extern int    thread_count;     //default 1
-    extern int    max_load;         //max load per thread, default 1000
-    extern string docpath;          //website root
-    extern string indexfile;        //default "index.htm"*/
-
     char     *str;
     GKeyFile *key_file = g_key_file_new();
     GError   *g_error = NULL;

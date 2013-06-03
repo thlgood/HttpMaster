@@ -1,6 +1,5 @@
 /**
  * @brief default settings
- *
  */
 #include "core.h"
 

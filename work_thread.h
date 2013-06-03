@@ -7,4 +7,9 @@
  */
 void* work_thread(void*arg);
 
+/**
+ * @brief set a block fd/socket to nonblock fd
+ * @param fd
+ */
+static void setnonblock(int fd);
 #endif // WORK_THREAD_H
